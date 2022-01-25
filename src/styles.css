@@ -1,0 +1,79 @@
+h1{
+
+    color: black;
+ 
+ }
+ 
+ body {
+   background-color: dimgrey;
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+     sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+     monospace;
+ }
+ 
+ .postit{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    
+   /* float: right;
+    display: inline-block;
+   */
+    flex-wrap: wrap;
+    -webkit-transform:rotate(-4deg);
+    -o-transform:rotate(-4deg);
+    -moz-transform:rotate(-4deg); 
+ } 
+ 
+ ul li:nth-child(even) .postit{
+    -o-transform:rotate(4deg);
+     -webkit-transform:rotate(4deg); 
+     -moz-transform:rotate(4deg);
+     position:relative; top:5px; 
+ } 
+ 
+ ul li:nth-child(3n) .postit{
+    -o-transform:rotate(-3deg);
+    -webkit-transform:rotate(-3deg);
+    -moz-transform:rotate(-3deg); 
+    position:relative; top:-5px; 
+ } 
+ 
+ ul li:nth-child(5n) .postit{
+    -o-transform:rotate(5deg); 
+ }
+ 
+ .x{
+   position: relative; 
+   background: rgba(0, 0, 0, 0);
+   border-style: none;
+   float: right; 
+   text-decoration: none; 
+   font-weight: bold; 
+   color: var(--colorX);
+   top: -10px; right: -10px; 
+ } 
+ 
+ 
+ ul li .postit:hover, 
+ ul li .postit:focus {
+     -moz-box-shadow: lOpx lOpx 7px rgba(0, 0, 0, .7);
+     -webkit-box-shadow: lOpx 1 px 7px rgba(0, 0, 0, .7);
+     box-shadow: 10px 10px 7px  rgba(0 0 0, .7);
+     -webkit-transform: scale(1.25); 
+     -moz-transform: scale(1.25); 
+     -o-transform: scale(1.25); 
+     position: relative;
+     z-index: 5;
+ }
+ 
