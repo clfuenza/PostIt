@@ -12,12 +12,13 @@ export function TodoList(){
     const taskRef = useRef();
     const tituloRef = useRef();
 
-    useEffect(() => {
+  /*  Guarda en el caché del navegador. No se borra.
+      useEffect(() => {
         const storedTodos = JSON.parse(localStorage.getItem(KEY));
         if (storedTodos){
             setTodos(storedTodos);
         }
-    }, [])
+    }, []) */
 
     useEffect(() => {
         localStorage.setItem(KEY, JSON.stringify(todos));
@@ -109,8 +110,7 @@ export function TodoList(){
                              
             </div>
 
-            <ul className="list-group">        
-                            
+            <ul className="list-group list-group-horizontal-lg">                             
 
                 {todos.map((todo) => (
                     <TodoItem todo={todo} key={todo.id} cambiarEstado={cambiarEstadoTarea}></TodoItem>
